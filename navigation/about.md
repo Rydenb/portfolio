@@ -1,31 +1,55 @@
----
-layout: post
-title: About
-permalink: /about/
+
 comments: true
 ---
 
 ## As a conversation Starter
+## About Me
+
+Hi! My name is Ryden. I have lived in San Diego, California my whole life. Some of my biggest interests are video games, badminton, and soccer.
+
+## Where I’m From
+
+San Diego has always been home for me. I have grown up in the San Diego area and have lived here my whole life.
+
+**California Flag**
+
+San Diego, California<br>
+Home my whole life
 
 Here are some places I have lived.
+## My Interests
 
 <comment>
 Flags are made using Wikipedia images
 </comment>
+Here are some of the things I enjoy:
 
 <style>
     /* Style looks pretty compact, 
        - grid-container and grid-item are referenced the code 
     */
     .grid-container {
+    .interest-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Dynamic columns */
         gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin: 20px 0;
     }
     .grid-item {
+
+    .interest-card {
+        overflow: hidden;
+        border: 1px solid #ddd;
+        border-radius: 10px;
         text-align: center;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
     }
     .grid-item img {
+
+    .interest-card img {
         width: 100%;
         height: 100px; /* Fixed height for uniformity */
         object-fit: contain; /* Ensure the image fits within the fixed height */
@@ -43,6 +67,7 @@ Flags are made using Wikipedia images
 
     .image-gallery img {
         max-height: 150px;
+        height: 180px;
         object-fit: cover;
         border-radius: 5px;
     }
@@ -61,9 +86,6 @@ Flags are made using Wikipedia images
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
         {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "b/b9/Flag_of_Oregon.svg", "greeting": "Hi", "description": "Oregon - 9 years"},
-        {"flag": "b/be/Flag_of_England.svg", "greeting": "Alright mate", "description": "England - 2 years"},
-        {"flag": "e/ef/Flag_of_Hawaii.svg", "greeting": "Aloha", "description": "Hawaii - 2 years"},
     ];
 
     // 3a. Consider how to update style count for size of container
@@ -86,6 +108,9 @@ Flags are made using Wikipedia images
         // Add "p" HTML tag for the greeting
         var greeting = document.createElement("p");
         greeting.textContent = location.greeting;  // extract the greeting
+    .interest-card h3 {
+        margin: 12px 8px 6px;
+    }
 
         // Append img and p HTML tags to the grid item DIV
         gridItem.appendChild(img);
@@ -94,12 +119,22 @@ Flags are made using Wikipedia images
 
         // Append the grid item DIV to the container DIV
         container.appendChild(gridItem);
+    .interest-card p {
+        margin: 0 12px 14px;
     }
 </script>
+</style>
 
 ### Journey through Life
 
 Here is what I did at those places
+<div class="interest-grid">
+    <div class="interest-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rocket%20League%20coverart.jpg" alt="Rocket League cover art">
+        <h3>🎮 Video Games</h3>
+        <p>I especially enjoy playing Rocket League.</p>
+        <a href="https://commons.wikimedia.org/wiki/File:Rocket_League_coverart.jpg" target="_blank" rel="noopener">Image source</a>
+    </div>
 
 - 🏫 Lots of Elementary Schools in Tucson, LA, Honolulu, and Glendale (CA)
 - 🏫 Middle and High School in Glendale (CA), Hoover High graduated '77
@@ -111,28 +146,33 @@ Here is what I did at those places
 - 🏢 San Diego CA Qualcomm, Satellite Comm and 1st Mobile OS (BREW) '96 to '19
 - 👨‍🏫 San Diego CA Teacher of Computer Science @ Del Norte High School San Diego '19 to present
 
+### My Interests
+
+Some of my biggest interests are video games, badminton, and soccer.
+    <div class="interest-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Badminton.jpg" alt="Badminton equipment">
+        <h3>🏸 Badminton</h3>
+        <p>I enjoy playing badminton in my free time.</p>
+        <a href="https://commons.wikimedia.org/wiki/Category:Badminton" target="_blank" rel="noopener">Image source</a>
+    </div>
+
+- 🎮 Video Games — I especially enjoy playing Rocket League.
+- 🏸 Badminton — I enjoy playing badminton in my free time.
+- ⚽ Soccer — I enjoy playing soccer and staying active.
+    <div class="interest-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Soccer%20Ball%20%28120908768%29.jpg" alt="Soccer ball">
+        <h3>⚽ Soccer</h3>
+        <p>I enjoy playing soccer and staying active.</p>
+        <a href="https://commons.wikimedia.org/wiki/File:Soccer_Ball_(120908768).jpg" target="_blank" rel="noopener">Image source</a>
+    </div>
+</div>
+
 ### Culture, Family, and Fun
+## More About My Interests
 
 Everything for me, as for many others, revolves around family and faith.
+- 🎮 **Video Games** — I like playing video games for fun, especially Rocket League.
+- 🏸 **Badminton** — I enjoy playing badminton and improving my skills.
+- ⚽ **Soccer** — I enjoy playing soccer and staying active.
 
-- My mother told me that I was Danish, English. and Irish, here is my researched [family tree]({{site.baseurl}}/images/about/familytree.png)
-- My family is pretty big as I have been married twice, my 1st wife passed away.  We have had 5 kids, 4 adopted by me, 1 biological.  Plus, there are three grandkids.  My name to my grandkids is Abuilito.
-- The gallery of pics has some of my family, fun, culture and faith memories.
-
-<comment>
-Gallery of Pics, scroll to the right for more ...
-</comment>
-<div class="image-gallery">
-  <img src="{{site.baseurl}}/images/about/missionary.jpg" alt="Image 1">
-  <img src="{{site.baseurl}}/images/about/john_tamara.jpg" alt="Image 2">
-  <img src="{{site.baseurl}}/images/about/tamara_fam.jpg" alt="Image 3">
-  <img src="{{site.baseurl}}/images/about/surf.jpg" alt="Image 4">
-  <img src="{{site.baseurl}}/images/about/john_lora.jpg" alt="Image 5">
-  <img src="{{site.baseurl}}/images/about/lora_fam.jpg" alt="Image 6">
-  <img src="{{site.baseurl}}/images/about/lora_fam2.jpg" alt="Image 7">
-  <img src="{{site.baseurl}}/images/about/pj_party.jpg" alt="Image 8">
-  <img src="{{site.baseurl}}/images/about/trent_family.png" alt="Image 9">
-  <img src="{{site.baseurl}}/images/about/claire.jpg" alt="Image 10">
-  <img src="{{site.baseurl}}/images/about/grandkids.jpg" alt="Image 11">
-  <img src="{{site.baseurl}}/images/about/farm.jpg" alt="Image 12">
-</div>
+In my free time, I enjoy playing Rocket League, badminton, and soccer. San Diego has been my home my entire life, and many of my hobbies and interests have developed while growing up here.
