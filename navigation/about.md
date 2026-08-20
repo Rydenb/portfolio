@@ -125,26 +125,6 @@ Here are some of the things I enjoy:
 </script>
 </style>
 
-### Journey through Life
-
-Here is what I did at those places
-<div class="interest-grid">
-    <div class="interest-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rocket%20League%20coverart.jpg" alt="Rocket League cover art">
-        <h3>🎮 Video Games</h3>
-        <p>I especially enjoy playing Rocket League.</p>
-        <a href="https://commons.wikimedia.org/wiki/File:Rocket_League_coverart.jpg" target="_blank" rel="noopener">Image source</a>
-    </div>
-
-- 🏫 Lots of Elementary Schools in Tucson, LA, Honolulu, and Glendale (CA)
-- 🏫 Middle and High School in Glendale (CA), Hoover High graduated '77
-- 🎓 Glendale CA Community College, UCLA Extension, LA Wilshire Computer Tech School '77 to '79
-- ⛪ England, London Missionary for Church of Jesus Christ of Latter-day Saints '79 to '81
-- 💼 Culver City, Glendale CA founder at Ashton-Tate, original PC's dBase 2 and 3 '82 to '87
-- 🎓 Eugene Oregon Undergraduate CompSci Degree at University of Oregon (Go Ducks!) '89 to '91
-- 💼 Eugene Oregon, founder and owner @ Microniche `88, Point Control CAD CAM developer '91 to '96
-- 🏢 San Diego CA Qualcomm, Satellite Comm and 1st Mobile OS (BREW) '96 to '19
-- 👨‍🏫 San Diego CA Teacher of Computer Science @ Del Norte High School San Diego '19 to present
 
 ### My Interests
 
@@ -156,9 +136,9 @@ Some of my biggest interests are video games, badminton, and soccer.
         <a href="https://commons.wikimedia.org/wiki/Category:Badminton" target="_blank" rel="noopener">Image source</a>
     </div>
 
-- 🎮 Video Games — I especially enjoy playing Rocket League.
-- 🏸 Badminton — I enjoy playing badminton in my free time.
-- ⚽ Soccer — I enjoy playing soccer and staying active.
+- 🎮 Video Games
+- 🏸 Badminton
+- ⚽ Soccer
     <div class="interest-card">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Soccer%20Ball%20%28120908768%29.jpg" alt="Soccer ball">
         <h3>⚽ Soccer</h3>
@@ -171,8 +151,7 @@ Some of my biggest interests are video games, badminton, and soccer.
 ## More About My Interests
 
 Everything for me, as for many others, revolves around family and faith.
-- 🎮 **Video Games** — I like playing video games for fun, especially Rocket League.
-- 🏸 **Badminton** — I enjoy playing badminton and improving my skills.
-- ⚽ **Soccer** — I enjoy playing soccer and staying active.
-
+- 🎮 **Video Games**
+- 🏸 **Badminton**
+- ⚽ **Soccer** 
 In my free time, I enjoy playing Rocket League, badminton, and soccer. San Diego has been my home my entire life, and many of my hobbies and interests have developed while growing up here.
