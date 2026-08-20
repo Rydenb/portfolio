@@ -20,7 +20,6 @@ Here are some places I have lived.
 ## My Interests
 
 <comment>
-Flags are made using Wikipedia images
 </comment>
 Here are some of the things I enjoy:
 
