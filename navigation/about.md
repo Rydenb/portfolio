@@ -42,11 +42,12 @@ San Diego has always been home for me. I have grown up in the San Diego area and
 
     .interest-card {
         overflow: hidden;
-        border: 1px solid #ddd;
+        border: 1px solid #303846;
         border-radius: 10px;
         text-align: center;
-        background: #fff;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        background: #171c25;
+        color: #f5f7fa;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .interest-card img {
@@ -57,10 +58,12 @@ San Diego has always been home for me. I have grown up in the San Diego area and
 
     .interest-card h3 {
         margin: 12px 8px 6px;
+        color: #ffffff;
     }
 
     .interest-card p {
         margin: 0 12px 14px;
+        color: #c8d0dc;
     }
 
     .interest-card a {
@@ -83,9 +86,8 @@ Some of the things I enjoy:
 
 <div class="interest-grid">
 
-```
 <div class="interest-card">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rocket%20League.jpg" alt="Video Games">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Rocket_League_coverart.jpg" alt="Rocket League cover art">
     <h3>🎮 Video Games</h3>
     <p>I enjoy playing video games, especially Rocket League, and playing with friends.</p>
 </div>
@@ -101,8 +103,6 @@ Some of the things I enjoy:
     <h3>⚽ Soccer</h3>
     <p>I enjoy playing soccer and staying active.</p>
 </div>
-```
-
 </div>
 
 ## A Little More About Me
