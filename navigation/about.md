@@ -1,10 +1,9 @@
 ---
-
 layout: post
 title: About Me
 permalink: /about/
 comments: true
---------------
+---
 
 ## As a Conversation Starter
 
