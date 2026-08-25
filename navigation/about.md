@@ -87,19 +87,19 @@ Some of the things I enjoy:
 
 <div class="interest-card">
     <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Rocket_League_coverart.jpg" alt="Rocket League cover art">
-    <h3>🎮 Video Games</h3>
+    <h3>Video Games</h3>
     <p>I enjoy playing video games, especially Rocket League, and playing with friends.</p>
 </div>
 
 <div class="interest-card">
     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Badminton.jpg" alt="Badminton">
-    <h3>🏸 Badminton</h3>
+    <h3>Badminton</h3>
     <p>I enjoy playing badminton in my free time, especially with friends.</p>
 </div>
 
 <div class="interest-card">
     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Soccer%20Ball%20%28120908768%29.jpg" alt="Soccer Ball">
-    <h3>⚽ Soccer</h3>
+    <h3>Soccer</h3>
     <p>I enjoy playing soccer and staying active.</p>
 </div>
 </div>
