@@ -19,6 +19,8 @@ San Diego has always been home for me. I have grown up in the San Diego area and
     .location-container {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 24px;
         margin: 20px 0;
     }
 
@@ -30,6 +32,20 @@ San Diego has always been home for me. I have grown up in the San Diego area and
         width: 180px;
         height: 110px;
         object-fit: contain;
+    }
+
+    .heritage-flag {
+        display: flex;
+        width: 180px;
+        height: 110px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .heritage-flag img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .interest-grid {
@@ -76,6 +92,14 @@ San Diego has always been home for me. I have grown up in the San Diego area and
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="California Flag">
         <p><strong>San Diego, California</strong></p>
         <p>Home my whole life</p>
+    </div>
+    <div class="location-item">
+        <div class="heritage-flag">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" alt="Japanese flag">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="United States flag">
+        </div>
+        <p><strong>Japanese / White</strong></p>
+        <p>Half Japanese, half American</p>
     </div>
 </div>
 
