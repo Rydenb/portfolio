@@ -13,7 +13,7 @@ Hi! My name is **Ryden**. I have lived in **San Diego, California** my whole lif
 
 ## Where I'm From
 
-San Diego has always been home for me. I have grown up in the San Diego area and have lived here my whole life.
+San Diego has always been home for me. I have grown up in the San Diego area and have lived here my whole life. ewfji
 
 <style>
     .location-container {
