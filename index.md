@@ -5,7 +5,11 @@ hide: true
 show_reading_time: false
 ---
 
+<<<<<<< HEAD
 Hi! My name is Ryden Bercovitch
+=======
+Hi! My name is [Your Full Name]
+>>>>>>> upstream/main
 
 ### Development Environment
 
