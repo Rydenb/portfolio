@@ -58,42 +58,6 @@
     min-width: 120px;
   }
 
-<<<<<<< HEAD
-  // Game-specific buttons - using element classes for semantic colors
-  .pauseBtn,
-  .stopBtn,
-  .resetBtn {
-    @include icon-button(38px, 0);
-  }
-
-  // Pause button - warning color (yellow) for attention
-  .pauseBtn {
-    @extend .warning-button;
-
-    &:disabled {
-      background: var(--pref-bg-color) !important;
-      border-color: var(--ui-border) !important;
-      color: var(--pref-text-color) !important;
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-  }
-
-  // Stop button - danger color (red) for critical action
-  .stopBtn {
-    @extend .danger-button;
-
-    &:disabled {
-      background: var(--pref-bg-color) !important;
-      border-color: var(--ui-border) !important;
-      color: var(--pref-text-color) !important;
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-  }
-
-=======
->>>>>>> upstream/main
   // Game status indicator
   .game-status {
     font-weight: 500;
@@ -107,32 +71,14 @@
   // Compact controls for hide_edit mode (mini-game experiences)
   .compact-controls {
     display: flex;
-<<<<<<< HEAD
-    gap: 10px;
-=======
     flex-wrap: wrap;
     gap: 8px;
->>>>>>> upstream/main
     align-items: center;
     padding: 12px;
     background: var(--pref-bg-color);
     border: 1px solid var(--ui-border);
     border-radius: 8px;
     margin-bottom: 10px;
-<<<<<<< HEAD
-    
-    .runBtn,
-    .stopBtn,
-    .resetBtn {
-      @include icon-button(38px, 0);
-    }
-    
-    .levelSelect {
-      @include select-control();
-      min-width: 120px;
-      flex: 1;
-      max-width: 200px;
-=======
     justify-content: flex-start;
 
     button,
@@ -187,7 +133,6 @@
         flex-basis: calc(50% - 0.3rem);
         min-width: 0;
       }
->>>>>>> upstream/main
     }
   }
 
@@ -225,65 +170,12 @@
 
 .fullscreen-control-header {
   background: rgba(255, 255, 255, 0.1);
-<<<<<<< HEAD
-=======
-  -webkit-backdrop-filter: blur(10px);
->>>>>>> upstream/main
-  backdrop-filter: blur(10px);
-  padding: 0.75rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-
-  &.collapsed {
-    padding: 0.5rem 1.5rem;
-  }
-}
-
-.fullscreen-collapse-btn {
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: var(--pref-text-color);
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  position: absolute;
-  left: 1.5rem;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
-  }
-}
-
-.fullscreen-title {
-  color: var(--pref-text-color);
-  font-weight: 600;
-  font-size: 1rem;
-  position: absolute;
-  left: 4rem;
-}
-
-.fullscreen-controls-container {
-  display: flex;
-<<<<<<< HEAD
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-=======
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
   transition: all 0.3s ease;
   padding-left: 12rem;
->>>>>>> upstream/main
 
   &.collapsed {
     display: none;
@@ -293,12 +185,6 @@
     background: var(--pref-accent-color);
     border: none;
     color: var(--pref-text-color);
-<<<<<<< HEAD
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-=======
     width: 44px;
     min-width: 44px;
     height: 44px;
@@ -310,7 +196,6 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
->>>>>>> upstream/main
     transition: all 0.3s ease;
 
     &:hover:not(:disabled) {
@@ -348,8 +233,6 @@
       color: var(--pref-text-color);
     }
   }
-<<<<<<< HEAD
-=======
 
   @media (max-width: 900px) {
     padding-left: 0;
@@ -378,5 +261,4 @@
       flex-basis: 100%;
     }
   }
->>>>>>> upstream/main
 }

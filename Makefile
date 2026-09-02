@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-OST ?= localhost
-=======
 HOST ?= localhost
->>>>>>> upstream/main
 PORT ?= 4500
 LOG_FILE = /tmp/jekyll$(PORT).log
 PYTHON := venv/bin/python3
@@ -197,11 +193,6 @@ serve-yat: use-yat clean
 # Project Targets
 ###########################################
 
-<<<<<<< HEAD
-# Build all registered projects (game assets, not docs)
-build-registered-projects:
-	$(call run_projects,$(ALL_PROJECTS),Building,build)
-=======
 # Generate Makefiles for all registered projects
 generate-makefiles:
 	@echo "Generating Makefiles for registered projects..."
@@ -223,16 +214,12 @@ build-registered-projects:
 	$(call run_projects,$(ALL_PROJECTS),Building,build)
 	@echo "Generating dynamic SASS imports..."
 	@$(PYTHON) scripts/generate_sass_imports.py
->>>>>>> upstream/main
 
 build-dev-projects:
 	@echo "Active DEV Projects: $(ACTIVE_DEV_PROJECTS)"
 	$(call run_projects,$(ACTIVE_DEV_PROJECTS),Building,build)
-<<<<<<< HEAD
-=======
 	@echo "Generating dynamic SASS imports..."
 	@$(PYTHON) scripts/generate_sass_imports.py 2>&1 || echo "⚠️  SASS import generation failed"
->>>>>>> upstream/main
 
 # Convert notebooks for dev projects only (dev mode initial build)
 convert-registered-notebooks:
@@ -275,11 +262,8 @@ build-yat: use-yat build-current
 
 build-current: clean convert split-courses
 	@bundle install
-<<<<<<< HEAD
-=======
 	@echo "Generating dynamic SASS imports..."
 	@$(PYTHON) scripts/generate_sass_imports.py 2>&1 || echo "⚠️  SASS import generation failed"
->>>>>>> upstream/main
 	@bundle exec jekyll clean
 	@bundle exec jekyll build
 
@@ -430,10 +414,7 @@ watch-rebuild:
 # Runs in background - use 'make stop' to stop, 'tail -f /tmp/jekyll4500.log' to view logs
 dev: stop clean
 	@echo "DEV Projects: $(ACTIVE_DEV_PROJECTS)"
-<<<<<<< HEAD
-=======
 	@$(MAKE) generate-makefiles
->>>>>>> upstream/main
 	@$(MAKE) build-dev-projects ORIGINAL_GOALS="$(ORIGINAL_GOALS)"
 	@$(MAKE) convert-registered-notebooks ORIGINAL_GOALS="$(ORIGINAL_GOALS)"
 	@$(MAKE) jekyll-serve ORIGINAL_GOALS="$(ORIGINAL_GOALS)"
@@ -494,17 +475,30 @@ watch-projects:
 # Bundle install (dependency for jekyll-serve)
 bundle-install:
 	@if [ ! -f .bundle/install_marker ] || [ Gemfile -nt .bundle/install_marker ] || [ Gemfile.lock -nt .bundle/install_marker ]; then \
-		bundle install; \
+		echo "Installing Ruby gems..."; \
+		bundle install --local 2>/dev/null || bundle install 2>&1 | tail -5 || echo "⚠️  Bundle install had issues, continuing anyway..."; \
 		mkdir -p .bundle && touch .bundle/install_marker; \
+	else \
+		echo "✓ Gems already installed"; \
 	fi
 
 # Start Jekyll server (no auto-watch, we control rebuilds manually)
+# Falls back to Python HTTP server if Jekyll is not available
 # Supports optional _config.local.yml override for local settings (e.g. baseurl)
 jekyll-serve: bundle-install
 	@touch /tmp/.notebook_watch_marker
 	@rm -f /tmp/.jekyll_rebuild_trigger
-	bundle exec jekyll serve -H $(HOST) -P $(PORT) --no-watch > $(LOG_FILE) 2>&1 &
-	@make wait-for-server
+	@if command -v bundle >/dev/null 2>&1 && bundle show jekyll >/dev/null 2>&1; then \
+		echo "Starting Jekyll server..."; \
+		bundle exec jekyll serve -H $(HOST) -P $(PORT) --no-watch > $(LOG_FILE) 2>&1 &; \
+		make wait-for-server; \
+	else \
+		echo "⚠️  Jekyll not available, starting Python HTTP server instead..."; \
+		echo "Server address: http://$(HOST):$(PORT)/" > $(LOG_FILE); \
+		cd _site && python3 -m http.server $(PORT) --bind $(HOST) > $(LOG_FILE) 2>&1 &; \
+		sleep 2; \
+		echo "✓ Python server running on http://$(HOST):$(PORT)"; \
+	fi
 
 # Common server wait logic
 wait-for-server:
@@ -644,8 +638,4 @@ list-projects:
 ###########################################
 
 %:
-<<<<<<< HEAD
 	@:
-=======
-	@:
->>>>>>> upstream/main
