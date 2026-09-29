@@ -475,30 +475,17 @@ watch-projects:
 # Bundle install (dependency for jekyll-serve)
 bundle-install:
 	@if [ ! -f .bundle/install_marker ] || [ Gemfile -nt .bundle/install_marker ] || [ Gemfile.lock -nt .bundle/install_marker ]; then \
-		echo "Installing Ruby gems..."; \
-		bundle install --local 2>/dev/null || bundle install 2>&1 | tail -5 || echo "⚠️  Bundle install had issues, continuing anyway..."; \
+		bundle install; \
 		mkdir -p .bundle && touch .bundle/install_marker; \
-	else \
-		echo "✓ Gems already installed"; \
 	fi
 
 # Start Jekyll server (no auto-watch, we control rebuilds manually)
-# Falls back to Python HTTP server if Jekyll is not available
 # Supports optional _config.local.yml override for local settings (e.g. baseurl)
 jekyll-serve: bundle-install
 	@touch /tmp/.notebook_watch_marker
 	@rm -f /tmp/.jekyll_rebuild_trigger
-	@if command -v bundle >/dev/null 2>&1 && bundle show jekyll >/dev/null 2>&1; then \
-		echo "Starting Jekyll server..."; \
-		bundle exec jekyll serve -H $(HOST) -P $(PORT) --no-watch > $(LOG_FILE) 2>&1 &; \
-		make wait-for-server; \
-	else \
-		echo "⚠️  Jekyll not available, starting Python HTTP server instead..."; \
-		echo "Server address: http://$(HOST):$(PORT)/" > $(LOG_FILE); \
-		cd _site && python3 -m http.server $(PORT) --bind $(HOST) > $(LOG_FILE) 2>&1 &; \
-		sleep 2; \
-		echo "✓ Python server running on http://$(HOST):$(PORT)"; \
-	fi
+	bundle exec jekyll serve -H $(HOST) -P $(PORT) --no-watch > $(LOG_FILE) 2>&1 &
+	@make wait-for-server
 
 # Common server wait logic
 wait-for-server:

@@ -34,6 +34,51 @@ import { BaseRunner, UiExecutor } from '{{ site.baseurl }}/assets/js/pages/runne
   if (!container) return;
   
   const defaultCode = `{{ include.code }}`.trim();
+  const autostart = "{{ include.autostart | default: 'false' }}" === "true";
+  const editorHeight = "{{ include.height }}";
+  const outputHeight = "{{ include.output_height }}";
+  const storageKey = container.dataset.storageKey;
+  const runner = new BaseRunner(container, { storageKey });
+
+  const editor = runner.initializeEditor({
+    defaultCode,
+    editorHeight,
+    fallbackCode: "// Write your JavaScript code here",
+    codeMirrorOptions: {
+      lineNumbers: true,
+      mode: "javascript",
+      theme: "darcula",
+      indentUnit: 2,
+      tabSize: 4,
+      styleSelectedText: true
+    }
+  });
+
+  if (outputHeight) {
+    runner.applyScopedStyle(`#ui-output-{{ include.runner_id }} { min-height: ${outputHeight}; max-height: ${outputHeight}; height: ${outputHeight}; }`);
+  }
+
+  const uiOutput = container.querySelector('.ui-output');
+  const uiExecutor = new UiExecutor({
+    editor,
+    outputElement: uiOutput,
+  });
+
+  runner.bindEditorButtons({
+    resetValue: defaultCode || "// Write your JavaScript code here",
+    onClear: () => {
+      stopExecution();
+    },
+    saveFeedback: '✔',
+    copyFeedback: '✔'
+  });
+
+  // Stop execution
+  function stopExecution() {
+    uiExecutor.stop();
+  }
+
+  // Reset button
   container.querySelector('[data-hook="reset"]').onclick = () => {
     stopExecution();
   };

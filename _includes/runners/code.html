@@ -122,6 +122,45 @@ import { pythonURI, javaURI, fetchOptions } from '{{site.baseurl}}/assets/js/api
   if (!container) return;
   
   const initialLang = "{{ include.language }}";
+  const autostart = "{{ include.autostart | default: 'false' }}" === "true";
+  const defaultCode = JSON.parse(container.dataset.defaultCode || "\"\"");
+  const editorHeight = "{{ include.height }}";
+  const storageKey = container.dataset.storageKey;
+  const runner = new BaseRunner(container, { storageKey });
+
+  const editor = runner.initializeEditor({
+    defaultCode,
+    editorHeight,
+    fallbackCode: "print('Hello, world!')",
+    codeMirrorOptions: {
+      lineNumbers: true,
+      mode: initialLang === "java" ? "text/x-java" : (initialLang || "python"),
+      theme: "darcula",
+      indentUnit: 4,
+      tabSize: 4,
+      styleSelectedText: true
+    }
+  });
+
+  const langSelect = container.querySelector('.languageSelect');
+  const fontSizeSelect = container.querySelector('.fontSizeSelect');
+  const outputDiv = container.querySelector('.output-content');
+  const execTimeSpan = container.querySelector('.execTime');
+  const codeExecutor = new CodeExecutor({
+    editor,
+    outputElement: outputDiv,
+    execTimeElement: execTimeSpan,
+    languageSelect: langSelect,
+    pythonURI,
+    javaURI,
+    fetchOptions,
+  });
+
+  const pseudoExecutor = new PseudocodeExecutor({
+    outputElement: outputDiv,
+    execTimeElement: execTimeSpan,
+  });
+
   const robotExecutor = new RobotExecutor({
     outputElement: outputDiv,
     execTimeElement: execTimeSpan,
