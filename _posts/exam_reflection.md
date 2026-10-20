@@ -13,7 +13,7 @@ I grew a lot this sprint, and the biggest lesson was that doing things fast isn'
 
 * **Learned how a full-stack pipeline actually works.** I connected our frontend login page to our Flask backend, so data typed on the site gets saved in the SQLite database and sent back. I can demo it on localhost.
 * **Learned what belongs in the frontend vs. the backend.** At one point too much got moved into the backend and the live site went blank without Flask running. Now I keep page text and fixed data in the frontend, and only shared or private data (users, roles, sign-ups) in the backend.
-* **Learned to work within the class system.** At first we used our own colors instead of the teacher's SASS. I switched every color to the original template palette, so the site follows the system instead of fighting it.
+* **Learned to work within the class system.** At first we used ai to generate the frontend and it used its own colors instead of the teacher's SASS. I switched every color to the original template palette, so the site follows the system instead of fighting it.
 * **Learned to prompt AI within requirements and to review what it does.** Giving AI clear rules (use the teacher's SASS, don't commit or push) got much better results, and checking every change with `git diff` before committing keeps mistakes off the live site.
 * **Work habits I'm fixing:** smaller commits with clear messages (not "debugging"), and keeping issues and the Kanban updated while I work, not after.
 
