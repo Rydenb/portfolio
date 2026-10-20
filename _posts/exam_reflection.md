@@ -18,7 +18,7 @@ I grew a lot this sprint, and the biggest lesson was that doing things fast isn'
 
 ## MCQ Retrospective
 
-I rushed the practice test. I spent under 10 seconds on 29 of the 66 questions, so even the ones I got right don't really show what I know. My score was 50/66 (76%). My strongest areas were Algorithms & Programming (87%) and Networks (100%), and my weakest was **Data (50%)**, especially binary numbers, compression, and reading graphs. Nine of my 16 Data questions were ones I rushed, so that's where slowing down matters most. I'm redoing the rushed questions at 1–2 minutes each and writing out why each answer is right, starting with binary and data analysis.
+I rushed the practice test and didn't read through almost half of the questions. I spent under 10 seconds on 29 of the 66 questions, so even the ones I got right don't really show what I know. My score was 50/66 (76%). My strongest areas were Algorithms & Programming (87%) and Networks (100%), and my weakest was **Data (50%)**, especially binary numbers, compression, and reading graphs. Nine of my 16 Data questions were ones I rushed, so that's where slowing down matters most. I'm redoing the rushed questions at 1–2 minutes each and writing out why each answer is right, starting with binary and data analysis.
 
 ## Team Improvements
 
