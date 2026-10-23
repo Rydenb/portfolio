@@ -12,7 +12,7 @@ author: Ryden Bercovitch
 I grew a lot this sprint, and the biggest lesson was that doing things fast isn't the same as doing them right.
 
 * **Learned how a full-stack pipeline actually works.** I connected our frontend login page to our Flask backend, so data typed on the site gets saved in the SQLite database and sent back. I can demo it on localhost.
-* **Learned to work within the class system.** At first we used ai to generate the frontend and it used its own colors instead of the teacher's SASS. I switched every color to the original template palette, so the site follows the system instead of fighting it.
+* **Learned to work within the class system.** At first we used ai to generate the frontend and it used its own colors instead of the teacher's SASS. We switched every color to the original template palette, so the site follows the system instead of fighting it.
 * **Learned to prompt AI within requirements and to review what it does.** Giving AI clear rules (use the teacher's SASS, don't commit or push) got much better results, and checking every change with `git diff` before committing keeps mistakes off the live site.
 * **Work habits I'm fixing:** smaller commits with clear messages (not "debugging"), and keeping issues and the Kanban updated while I work, not after.
 
@@ -53,7 +53,7 @@ As a team, Aarav and I got better at communicating and splitting work. Early on 
 | T08 | JavaScript / Coding Challenges | **1** | ↓ | | |
 | T09 | AI / Live Code Orchestration | **3** | ↑ | | |
 
-**Summary:** I now understand how our SASS is organized: every color lives in one tokens file, and I switched the whole site to the teacher's original palette. I'm moving the home page to a hub built from YAML data with OCS grammar classes. My AI orchestration improved a lot. I write prompts with clear rules, have the AI show its plan first, and review the diff before committing.
+**Summary:** I now understand how our SASS is organized:  lives in one tokens file, and I switched the whole site to the teacher's original palette. I'm moving the home page to a hub built from YAML data with OCS grammar classes. My AI orchestration improved a lot. I write prompts with clear rules, have the AI show its plan first, and review the diff before committing.
 ### My Team
 Our team changed this sprint. I now work with Aarav on a website for the San Diego Rescue Mission: a Jekyll frontend on GitHub Pages and a Flask + SQLite backend. Aarav is Scrum Master/Dev and I'm Technologist/Dev.
 
