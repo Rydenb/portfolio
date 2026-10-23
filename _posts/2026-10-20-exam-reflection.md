@@ -49,13 +49,11 @@ As a team, Aarav and I got better at communicating and splitting work. Early on 
 |---|---|:---:|:---:|:---:|:---:|
 | T05 | Tools & Equipment Hacks | 3 | = | | |
 | T06 | Portfolio / Blogging Hacks | 2 | = | | |
-| T07 | Theme / Style / Layout | **3** | ↑ | | |
+| T07 | Theme / Style / Layout | 2 | = | | |
 | T08 | JavaScript / Coding Challenges | **1** | ↓ | | |
 | T09 | AI / Live Code Orchestration | **3** | ↑ | | |
 
-**Summary:** I now understand how our SASS is organized:  lives in one tokens file, and I switched the whole site to the teacher's original palette. I'm moving the home page to a hub built from YAML data with OCS grammar classes. My AI orchestration improved a lot. I write prompts with clear rules, have the AI show its plan first, and review the diff before committing.
-### My Team
-Our team changed this sprint. I now work with Aarav on a website for the San Diego Rescue Mission: a Jekyll frontend on GitHub Pages and a Flask + SQLite backend. Aarav is Scrum Master/Dev and I'm Technologist/Dev.
+**Summary:** I'm moving the home page to a hub built from YAML data with OCS grammar classes. My AI orchestration improved a lot. I write prompts with clear rules, have the AI show its plan first, and review the diff before committing.
 
 ### Technical Awareness & Communication
 
@@ -75,9 +73,9 @@ Our team changed this sprint. I now work with Aarav on a website for the San Die
 |---|---|:---:|:---:|:---:|:---:|
 | P01 | Attendance / Tardy | 4 | = | | |
 | P02 | Work Habits | **2** | ↓ | | |
-| P03 | Integrity | 3 | = | | |
+| P03 | Integrity | **2** | ↓ | | |
 
-**Summary:** My attendance is still strong. I lowered work habits because I committed AI changes without reviewing them, used vague commit messages like "debugging", and rushed the practice MCQ. For integrity, I'm being upfront about how much AI helped build the site, and I'm writing my own Create PT code.
+**Summary:** My attendance is still strong. I lowered work habits because I committed AI changes without reviewing them, used vague commit messages like "debugging", and rushed the practice MCQ. For integrity, I haven't been 100% sure on everything my bot code is doing.
 
 ### Collaboration
 
@@ -100,15 +98,6 @@ Our team changed this sprint. I now work with Aarav on a website for the San Die
 
 **Summary:** I kept going through a lot of broken builds, merge conflicts, and backend errors. I lowered engagement because I didn't actually read almost half the MCQ questions. That's not real effort, and it means my score doesn't show what I know.
 
-### Score changes at a glance
-
-| Up ↑ | Down ↓ |
-|---|---|
-| T03 Git / GitHub (3 → 4) | T08 JavaScript / Coding (2 → 1) |
-| T07 Theme / Style / Layout (2 → 3) | P02 Work Habits (3 → 2) |
-| T09 AI / Live Code Orchestration (2 → 3) | P10 Engagement (3 → 2) |
-| T11 Learning Through Mistakes (3 → 4) | |
-
 ## Retrospective Question
 **What can I do now as a developer that I could not do at the beginning of this sprint?**
 I can connect a frontend to a backend: a login form sends JSON to a Flask API, which checks and saves it in SQLite and sends a session back. I can also manage a real team repo: an organization, branches, pull requests, stashing, and merging an upstream template into our project.
@@ -116,7 +105,7 @@ I can connect a frontend to a backend: a login form sends JSON to a Flask API, w
 ## Strongest Technical Evidence
 - **The technical evidence I am most proud of:** The working login page connected to our Flask backend (PR #13). Signing up on the site creates a new row in the SQLite `users` table.
 - **The biggest technical problem I solved:** The live site went blank because page text had been moved into the backend. I found the cause in the git history and fixed the frontend/backend split.
-- **The technical skill I most need to improve:** JavaScript / Coding Challenges, writing code myself instead of relying on AI.
+- **The technical skill I most need to improve:** JavaScript / Coding Challenges, understanding more of what the ai is doing and learning the structure allowing me to build our product in a safer manner.
 - **My next technical learning goal:** Write my own `filterOpportunities()` procedure for the volunteer page (issue #8) and use it as my Create PT code.
 
 ## Next Sprint Commitment
